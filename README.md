@@ -20,5 +20,4 @@ Live demo available at https://www.
 
 ## References
 https://socket.io/get-started/chat
-https://www.youtube.com/watch?v=jD7FnbI76Hg
-https://www.youtube.com/watch?v=xKaTnc1q8UQ
+
