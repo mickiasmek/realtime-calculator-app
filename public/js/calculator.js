@@ -6,25 +6,20 @@ const output_result_element = document.querySelector(".result .value");
 const real_time_output_element = document.querySelector(".main_container");
 
 //Get username from URL
-//sParam - username passed from input 
-function GetURLParameter(sParam)
-{
-    var sPageURL = window.location.search.substring(1);
-    var sURLVariables = sPageURL.split('&');
-    for (var i = 0; i < sURLVariables.length; i++) 
-    {
-        var sParameterName = sURLVariables[i].split('=');
-        if (sParameterName[0] == sParam) 
-        {
-            return sParameterName[1];
-        }
+//sParam - username passed from input
+function GetURLParameter(sParam) {
+  var sPageURL = window.location.search.substring(1);
+  var sURLVariables = sPageURL.split("&");
+  for (var i = 0; i < sURLVariables.length; i++) {
+    var sParameterName = sURLVariables[i].split("=");
+    if (sParameterName[0] == sParam) {
+      return sParameterName[1];
     }
+  }
 }
-
 
 //Global socket variable
 const socket = io();
-
 
 //Array of buttons
 let calculator_buttons = [
@@ -182,15 +177,12 @@ input_element.addEventListener("click", (event) => {
   });
 });
 
-
 var answer = "";
 var finalMessage = "";
 var user = "";
 
 let operations = [];
 function calculator(button) {
-
-
   if (button.type == "operator") {
     data.operation.push(button.symbol);
     data.result.push(button.formula);
@@ -235,18 +227,15 @@ function calculator(button) {
     // formats the result
     result_final = formatResult(result_final);
 
-    //Gets final operators 
+    //Gets final operators
     answer = result_final;
-    
-    user = GetURLParameter('username');
-   
-    finalMessage = user + ': ' + operations + " = " + answer;
 
-    
+    user = GetURLParameter("username");
 
-    socket.emit("op_result",(finalMessage));
-   // console.log(finalMessage);
-    
+    finalMessage = user + ": " + operations + " = " + answer;
+
+    socket.emit("op_result", finalMessage);
+    // console.log(finalMessage);
 
     // save result
     data.operation.push(result_final);
@@ -305,7 +294,6 @@ function formatResult(result) {
   }
 }
 
-
 //Outputs message to DOM
 function outputToDOM() {
   socket.on("op_result", function (msg) {
@@ -313,21 +301,17 @@ function outputToDOM() {
     var length = container_div.getElementsByTagName("div").length;
 
     if (length < 10) {
-
       var item = document.createElement("div");
       item.innerHTML = `<p class = "time_stamp">${msg}  </p>`;
       item.classList.add("realT_container_elements");
       real_time_output_element.prepend(item);
-
-    }else {
-      
+    } else {
       let container = document.getElementById("real_time_container");
       container.removeChild(container.lastElementChild);
       var item = document.createElement("div");
       item.innerHTML = `<p class = "time_stamp">${msg}</p>`;
       item.classList.add("realT_container_elements");
       real_time_output_element.prepend(item);
-      
     }
   });
 }
