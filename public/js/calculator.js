@@ -21,7 +21,7 @@ function GetURLParameter(sParam) {
 //Global socket variable
 const socket = io();
 
-//Array of buttons
+//Array of calculator buttons
 let calculator_buttons = [
   {
     name: "delete",
@@ -205,18 +205,19 @@ function calculator(button) {
 
     //used for later purposes
     const operations = data.operation.join("");
-    //operations.join('');
+    
 
     // Clears the array
     data.operation = [];
     data.result = [];
 
     let result_final;
+    // Validate syntax errors and output result
     try {
-      //computes the results
+      
       result_final = eval(result_joined);
     } catch (error) {
-      // Validate syntax errors
+      
       if (error instanceof SyntaxError) {
         result_final = `<p id = "syntax_error" >Syntax Error!</p>`;
         updateOutputResult(result_final);
