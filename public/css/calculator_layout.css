@@ -1,0 +1,162 @@
+* {
+  padding: 0;
+  margin: 0;
+  background-origin: padding-box;
+  font-family: "Courier New", Courier, monospace;
+}
+
+html {
+  font-size: 15px;
+  background-color: #e6eceb;
+}
+
+.calculator {
+  position: relative;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+.calc-container {
+  background-color: #1a1e1f;
+
+  width: 300px;
+  height: auto;
+}
+
+.output {
+  width: 100%;
+}
+
+.operation {
+  width: 300px;
+  height: 70px;
+
+  color: #ffffff;
+
+  font-size: 1.6em;
+  font-weight: bold;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.operation .value {
+  position: absolute;
+
+  bottom: 0.3em;
+  right: 0.6em;
+
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.result {
+  width: inherit;
+  height: 100px;
+
+  color: #0c7708;
+
+  font-size: 2.5em;
+  font-weight: bold;
+
+  overflow: hidden;
+  position: relative;
+}
+
+.result .value {
+  position: absolute;
+
+  top: 50%;
+  /* transform: translateY(-50);  */
+  right: 10px;
+}
+
+.input {
+  background-color: #c3ddf5;
+
+  border: 1px solid #1a1e1f;
+  height: 340px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.row button {
+  width: 50px;
+  height: 50px;
+
+  font-size: 1.5em;
+  border: none;
+
+  background-color: transparent;
+
+  margin: 8px;
+
+  cursor: pointer;
+}
+
+.row button:hover {
+  font-weight: bold;
+}
+
+.row #calculate {
+  color: #fff;
+  background-color: #92b80c;
+  width: 121px;
+}
+
+#syntax_error {
+  font-family: inherit;
+  font-size: 26px;
+  color: #b60b0b;
+}
+
+.row #delete {
+  color: #ffffff;
+  background-color: #472623;
+}
+
+.row #clear {
+  background-color: #bb2f25;
+  color: #ffffff;
+}
+
+#division,
+#multiplication,
+#subtraction,
+#addition {
+  color: #1d3fd6;
+}
+
+.real_time_view {
+  position: absolute;
+
+  width: 300px;
+
+  background-color: #ffffff;
+
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.real_time_view > p {
+  text-align: center;
+
+  background-color: #a07b3f;
+  color: #f5eeee;
+
+  padding: 10px;
+
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.main_container .realT_container .realT_container_elements {
+  width: inherit;
+  height: 1.3em;
+
+  
+}

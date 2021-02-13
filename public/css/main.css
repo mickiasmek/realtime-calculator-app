@@ -1,0 +1,81 @@
+*{
+    padding: 0;
+    margin: 0;
+    background-origin: padding-box;
+    font-family: 'Poppins', sans-serif;;
+}
+
+html{
+    font-size: 15px;
+    background-color:#e6eceb;
+}
+
+.login_container{
+    width: 300px;
+    height: auto;
+
+    margin: 0 auto;
+    margin-top: 10%;
+
+}
+
+#title{
+    background-color: #1b1d1b;
+    color: #ffffff;
+    text-align: center;
+
+    font-size: 25px;
+
+    padding: 15px;
+}
+
+.login_form{
+    margin-top: 10%;
+    
+}
+.login_form #username{
+
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+
+
+  
+}
+
+::placeholder {
+    font-size: 1.2em;
+  }
+
+.login_form label{
+    font-size: medium;
+    
+
+}
+
+.login_form button{
+    border: none;
+    padding: 10px 25px;
+    margin: 4px 2px;
+
+    color: white;
+   
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    
+    display: inline-block;
+   
+    cursor: pointer;
+   
+
+}
+
+#btn_submit{
+    background-color: #4CAF50; 
+}
+
+#btn_cancel{
+    background-color: #c52626; 
+}

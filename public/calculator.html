@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Real Time Calculator App" />
+    <meta name="author" content="Mickias M. Hailemariam" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/calculator_layout.css" />
+    <title>Calculator App</title>
+  </head>
+  <body>
+    <div class="calculator">
+      <div class="calc-container">
+        <div class="output">
+          <div class="operation">
+            <div class="value"></div>
+          </div>
+
+          <div class="result">
+            <div class="value" >0</div>
+          </div>
+        </div>
+
+        <div class="input"></div>
+      </div>
+    </div>
+
+    <div id="main" class="real_time_view">
+      <p>Real Time View</p>
+      <div id="real_time_container" class="main_container"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.6/qs.min.js" 
+    integrity="sha512-3TmPrquYLaAsUmZKXRARTDC5siWhLAdBVqNo4dWpDABBtLU62AaoTaQJEvjxjExcZYurO6i1dnK85k8pPIBlRg=="
+     crossorigin="anonymous">
+    </script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/calculator.js"></script>
+  </body>
+</html>
