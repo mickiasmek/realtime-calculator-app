@@ -16,7 +16,7 @@ Results should remain between sessions. Only show the last 10 calculations desce
 1. `npm run dev` : Runs the server
 
 ## Deployment
-Live demo available at https://www.
+Live demo available at https://real-time-calculator.herokuapp.com/
 
 ## References
 1. https://socket.io/get-started/chat
