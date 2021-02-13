@@ -19,6 +19,6 @@ Results should remain between sessions. Only show the last 10 calculations desce
 Live demo available at https://www.
 
 ## References
-https://socket.io/get-started/chat
-https://www.youtube.com/watch?v=xKaTnc1q8UQ
-https://www.youtube.com/watch?v=jD7FnbI76Hg
+1. https://socket.io/get-started/chat
+2. https://www.youtube.com/watch?v=xKaTnc1q8UQ
+3. https://www.youtube.com/watch?v=jD7FnbI76Hg
