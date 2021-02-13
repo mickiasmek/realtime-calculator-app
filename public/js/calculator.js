@@ -315,22 +315,19 @@ function outputToDOM() {
     if (length < 10) {
 
       var item = document.createElement("div");
-      console.log(user);
-      let sq = Math.sqrt(42);
-      console.log(eval(sq));
       item.innerHTML = `<p class = "time_stamp">${msg}  </p>`;
       item.classList.add("realT_container_elements");
       real_time_output_element.prepend(item);
 
-    } else {
+    }else {
       
       let container = document.getElementById("real_time_container");
       container.removeChild(container.lastElementChild);
       var item = document.createElement("div");
       item.innerHTML = `<p class = "time_stamp">${msg}</p>`;
-      item.textContent = msg.text;
       item.classList.add("realT_container_elements");
       real_time_output_element.prepend(item);
+      
     }
   });
 }
